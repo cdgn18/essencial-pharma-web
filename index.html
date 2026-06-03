@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essencial Pharma | Soluciones Farmacéuticas y Dermocosmética</title>
+    <meta name="description" content="Distribuidora líder de medicamentos esenciales y fórmulas magistrales en oftalmología en Colombia. Descubre nuestra nueva línea de dermocosmética capilar de alta gama.">
+    <link rel="icon" href="https://www.essencialpharma.com.co/wp-content/uploads/2025/12/cropped-logo-essencial-fharma_Essencial-Pharma-Horizontal-1-1-32x32.png" sizes="32x32" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="#inicio" class="logo" style="display: flex; align-items: center;">
+                <img src="https://www.essencialpharma.com.co/wp-content/uploads/2025/12/logo-essencial-fharma_Essencial-Pharma-Horizontal-1-1.png" alt="Essencial Pharma Logo">
+            </a>
+
+            <nav class="nav">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#medicamentos" class="nav-link">Medicamentos</a>
+                <a href="#dermocosmetica" class="nav-link">Dermocosmética</a>
+                <a href="#compromiso" class="nav-link">Compromiso</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="ctrl-btn theme-toggle" aria-label="Cambiar Tema" id="theme-toggle-btn">
+                    <svg class="sun-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Cart Button -->
+                <button class="ctrl-btn cart-toggle" aria-label="Ver Carrito" id="cart-toggle-btn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </button>
+
+                <!-- Hamburger Mobile Menu -->
+                <button class="hamburger" aria-label="Abrir Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="section-tag">Distribución Profesional</span>
+                    <h1>Soluciones farmacéuticas integrales para el sector salud</h1>
+                    <p>Proveemos medicamentos esenciales de la más alta calidad y fórmulas magistrales en oftalmología. Además, te presentamos nuestra nueva línea capilar dermocosmética premium con venta directa.</p>
+                    <div class="hero-btns">
+                        <a href="#medicamentos" class="btn btn-primary">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            Ver Medicamentos
+                        </a>
+                        <a href="#dermocosmetica" class="btn btn-secondary">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                            Tienda Dermocosmética
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-visual-bg"></div>
+                    <img src="https://www.essencialpharma.com.co/wp-content/uploads/2025/12/Rectangle-10-1.png" alt="Essencial Pharma Hero Image" class="hero-image">
+                    
+                    <!-- Floating Badge 1 -->
+                    <div class="hero-badge-float glass-panel">
+                        <div class="hero-badge-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        </div>
+                        <div class="hero-badge-info">
+                            <h4>Normas INVIMA & OMS</h4>
+                            <p>Garantía de calidad</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge 2 -->
+                    <div class="hero-badge-float top-right glass-panel">
+                        <div class="hero-badge-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div class="hero-badge-info">
+                            <h4>Línea Capilar</h4>
+                            <p>Nueva categoría dermo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="servicios" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-tag">Soluciones a tu Medida</span>
+                <h2 class="section-title">Nuestros Servicios Especializados</h2>
+                <p class="section-desc">Diseñados para garantizar el acceso, seguridad y disponibilidad de medicamentos esenciales, trabajando con hospitales, clínicas, farmacias y entidades públicas y privadas.</p>
+            </div>
+
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                <!-- Service 1 -->
+                <div class="feat-card glass-panel" style="text-align: left; padding: 40px; display: flex; flex-direction: column;">
+                    <div class="feat-icon-wrap" style="margin: 0 0 24px 0;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="feat-title" style="margin-bottom: 8px;">Distribución de Medicamentos</h3>
+                    <p style="color: var(--color-secondary); font-size: 0.9rem; font-weight: 600; margin-bottom: 16px;">Garantizamos calidad, trazabilidad y cumplimiento normativo en cada entrega.</p>
+                    <p class="feat-desc" style="margin-bottom: 24px; flex-grow: 1; font-size: 0.9rem;">Contamos con una red logística eficiente para ofrecer un suministro continuo de medicamentos esenciales avalados por la OMS en óptimas condiciones de seguridad y temperatura.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--text-secondary);">
+                        <li>✓ Almacenamiento bajo condiciones certificadas</li>
+                        <li>✓ Control de calidad en cada lote distribuido</li>
+                        <li>✓ Entregas oportunas con cobertura a nivel nacional</li>
+                        <li>✓ Cumplimiento estricto de normativas INVIMA y OMS</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="feat-card glass-panel" style="text-align: left; padding: 40px; display: flex; flex-direction: column;">
+                    <div class="feat-icon-wrap" style="margin: 0 0 24px 0;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.168.477 4 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4 1.253"></path></svg>
+                    </div>
+                    <h3 class="feat-title" style="margin-bottom: 8px;">Asesoría Farmacéutica</h3>
+                    <p style="color: var(--color-secondary); font-size: 0.9rem; font-weight: 600; margin-bottom: 16px;">Acompañamiento técnico especializado para optimizar el uso de medicamentos.</p>
+                    <p class="feat-desc" style="margin-bottom: 24px; flex-grow: 1; font-size: 0.9rem;">Nuestro equipo ofrece orientación y soporte técnico a IPS e instituciones de salud para garantizar un manejo racional, seguro y eficiente del portafolio.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--text-secondary);">
+                        <li>✓ Consultoría en selección y uso adecuado de esenciales</li>
+                        <li>✓ Asesoría en normativas sanitarias y registros</li>
+                        <li>✓ Capacitación en almacenamiento y dispensación (BPA)</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="feat-card glass-panel" style="text-align: left; padding: 40px; display: flex; flex-direction: column;">
+                    <div class="feat-icon-wrap" style="margin: 0 0 24px 0;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10M21 16V10a2 2 0 00-2-2h-3V5a1 1 0 00-1-1h-3M16 16h-3"></path></svg>
+                    </div>
+                    <h3 class="feat-title" style="margin-bottom: 8px;">Logística y Abastecimiento</h3>
+                    <p style="color: var(--color-secondary); font-size: 0.9rem; font-weight: 600; margin-bottom: 16px;">Procesos optimizados para asegurar disponibilidad constante y trazabilidad.</p>
+                    <p class="feat-desc" style="margin-bottom: 24px; flex-grow: 1; font-size: 0.9rem;">Implementamos estrategias logísticas de última generación que aseguran el flujo continuo de medicamentos desde su origen hasta el punto de entrega final.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--text-secondary);">
+                        <li>✓ Planificación de abastecimiento según demanda institucional</li>
+                        <li>✓ Control de stocks en tiempo real para evitar desabastecimiento</li>
+                        <li>✓ Seguimiento y trazabilidad digital del pedido en ruta</li>
+                        <li>✓ Reducción de costos logísticos y tiempos de entrega</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicines Section -->
+    <section class="section" id="medicamentos">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-tag">Portafolio Farmacéutico</span>
+                <h2 class="section-title">Medicamentos Esenciales</h2>
+                <p class="section-desc">Selección rigurosa de medicamentos bajo Buenas Prácticas de Manufactura. Por regulaciones nacionales, no se comercializan por e-commerce directo. Haz tu solicitud de cotización formal.</p>
+            </div>
+
+            <div class="catalog-controls">
+                <!-- Search -->
+                <div class="search-bar-wrap">
+                    <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Buscar medicamento o componente activo...">
+                </div>
+
+                <!-- Tabs -->
+                <div class="catalog-tabs">
+                    <button class="tab-btn active" data-tab="all">Todos</button>
+                    <button class="tab-btn" data-tab="analgesicos">Analgésicos y Antiinflamatorios</button>
+                    <button class="tab-btn" data-tab="antibioticos">Antibióticos y Antivirales</button>
+                    <button class="tab-btn" data-tab="cronicos">Enfermedades Crónicas</button>
+                    <button class="tab-btn" data-tab="formulas">Fórmulas Magistrales</button>
+                </div>
+            </div>
+
+            <!-- Medicines Grid -->
+            <div class="medicine-grid">
+                <!-- Rendered Dynamically by JS -->
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results glass-panel">
+                <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin: 0 auto 16px auto;"><path d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <h3>No se encontraron medicamentos</h3>
+                <p style="color:var(--text-secondary); margin-top:8px;">Prueba buscando otra palabra clave o cambiando de categoría.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dermocosmetics Section -->
+    <section class="section dermo-section" id="dermocosmetica">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-tag" style="color: var(--color-accent);">Línea Capilar Premium</span>
+                <h2 class="section-title">Tienda Dermocosmética</h2>
+                <p class="section-desc">Tratamientos científicos capilares de uso diario para restaurar, nutrir y fortalecer tu cabello. Disponibles para compra inmediata en línea con despacho nacional.</p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="product-grid">
+                <!-- Rendered Dynamically by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Commitment Section -->
+    <section class="section" id="compromiso">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-tag">Excelencia y Trazabilidad</span>
+                <h2 class="section-title">Compromiso de Calidad</h2>
+                <p class="section-desc">Garantizamos que todos nuestros productos farmacéuticos y cosméticos cumplen de forma estricta con las exigencias sanitarias.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feat-card glass-panel">
+                    <div class="feat-icon-wrap">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="feat-title">Productos Certificados</h3>
+                    <p class="feat-desc">Medicamentos debidamente avalados por el INVIMA, OMS y agencias internacionales.</p>
+                </div>
+
+                <div class="feat-card glass-panel">
+                    <div class="feat-icon-wrap">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="feat-title">Cadena de Frío</h3>
+                    <p class="feat-desc">Control riguroso de temperatura y condiciones óptimas de almacenamiento y transporte.</p>
+                </div>
+
+                <div class="feat-card glass-panel">
+                    <div class="feat-icon-wrap">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    </div>
+                    <h3 class="feat-title">Autenticidad Garantizada</h3>
+                    <p class="feat-desc">Trazabilidad completa en la procedencia y origen de todas las formulaciones.</p>
+                </div>
+
+                <div class="feat-card glass-panel">
+                    <div class="feat-icon-wrap">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="feat-title">Soporte Técnico Continuo</h3>
+                    <p class="feat-desc">Atención personalizada y acompañamiento constante por regentes farmacéuticos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Contact Section -->
+    <section class="section" id="nosotros">
+        <div class="container">
+            <div class="contact-split">
+                <!-- About Info -->
+                <div class="contact-info-panel">
+                    <div>
+                        <span class="section-tag">¿Quiénes Somos?</span>
+                        <h2 class="section-title">Comprometidos con la Salud en Colombia</h2>
+                        <p style="color: var(--text-secondary); margin-top:20px; font-size:1.05rem;">
+                            En <strong>Essencial Pharma</strong> somos aliados estratégicos del sector salud. Nos especializamos en la distribución de medicamentos esenciales que cumplen estrictas normas sanitarias globales y en el desarrollo de fórmulas magistrales oftálmicas adaptadas a necesidades individuales no comerciales.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-top:16px; font-size:1.05rem;">
+                            Bajo la visión de ofrecer cuidado integral, ampliamos nuestro portafolio con soluciones dermocosméticas capilares premium, respaldadas por investigación clínica para la salud folicular diaria.
+                        </p>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Teléfono / WhatsApp</h5>
+                                <p>(+57) 305 339 8870</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h5>E-Mail de Contacto</h5>
+                                <p>info@essencialpharma.com.co</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Ubicación</h5>
+                                <p>Carrera 25 # 9A sur 176 - Medellín, Colombia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <div class="glass-panel" id="contacto" style="padding: 40px;">
+                    <h3 style="margin-bottom: 8px; font-size: 1.6rem;">¿Dudas o requerimientos?</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 24px; font-size:0.9rem;">Envíanos un mensaje rápido y nos pondremos en contacto vía WhatsApp de inmediato.</p>
+
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" for="form-name">Nombre Completo</label>
+                            <input type="text" id="form-name" class="form-input" placeholder="Ej. Juan Pérez" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="form-phone">Teléfono de Contacto</label>
+                            <input type="tel" id="form-phone" class="form-input" placeholder="Ej. 3051234567" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="form-email">Correo Electrónico</label>
+                            <input type="email" id="form-email" class="form-input" placeholder="Ej. juan@correo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="form-message">Mensaje / Consulta</label>
+                            <textarea id="form-message" class="form-textarea" placeholder="Escribe tu consulta aquí..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary" style="width: 100%;">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"></path></svg>
+                            Enviar Consulta por WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="display: inline-block;">
+                        <img src="https://www.essencialpharma.com.co/wp-content/uploads/2025/12/logo-essencial-fharma_Essencial-Pharma-Horizontal-1-1.png" alt="Essencial Pharma Logo" style="height: 32px;">
+                    </div>
+                    <p class="footer-col-desc">Soluciones farmacéuticas adaptadas a las necesidades del sector salud en Colombia. Medicamentos esenciales y cuidado capilar dermocosmético.</p>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Secciones</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio" class="footer-link">Inicio</a></li>
+                        <li><a href="#servicios" class="footer-link">Servicios</a></li>
+                        <li><a href="#medicamentos" class="footer-link">Catálogo Medicamentos</a></li>
+                        <li><a href="#dermocosmetica" class="footer-link">Tienda Dermocosmética</a></li>
+                        <li><a href="#compromiso" class="footer-link">Compromiso Calidad</a></li>
+                        <li><a href="#nosotros" class="footer-link">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Contacto</h4>
+                    <ul class="footer-links" style="color: #94a3b8; font-size: 0.9rem;">
+                        <li style="display:flex; gap:8px; align-items:center;">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            (+57) 305 339 8870
+                        </li>
+                        <li style="display:flex; gap:8px; align-items:center;">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            info@essencialpharma.com.co
+                        </li>
+                        <li style="display:flex; gap:8px; align-items:flex-start;">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-top: 3px; flex-shrink:0;"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Carrera 25 # 9A sur 176 - Medellín, Colombia
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Essencial Pharma. Todos los derechos reservados. Rediseño Premium.</p>
+                <p>Medellín, Colombia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay"></div>
+    <aside class="cart-drawer glass-panel">
+        <div class="cart-header">
+            <h3 class="cart-title">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                Tu Carrito
+            </h3>
+            <button class="close-cart" aria-label="Cerrar Carrito">&times;</button>
+        </div>
+
+        <div class="cart-items-list">
+            <!-- Dynamic Items -->
+        </div>
+
+        <div class="cart-summary" style="display: none;">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0</span>
+            </div>
+            <div class="summary-row">
+                <span>Envío</span>
+                <span style="color:var(--color-secondary); font-weight: 600;">Calculado en WhatsApp</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total Estimado</span>
+                <span id="cart-total">$0</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary" onclick="openCheckoutModal()">Proceder al Pedido</button>
+                <button class="btn btn-outline" style="border:none;" onclick="document.querySelector('.cart-overlay').click()">Seguir Comprando</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Modal 1: Medicine Quote -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-card glass-panel">
+            <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+            <div class="modal-header">
+                <h3>Cotizar Medicamento</h3>
+                <p id="quote-med-label">Categoría > Nombre del Medicamento</p>
+            </div>
+            <form id="quote-form">
+                <input type="hidden" id="quote-med-name">
+                <div class="form-group">
+                    <label class="form-label" for="quote-name">Tu Nombre Completo</label>
+                    <input type="text" id="quote-name" class="form-input" placeholder="Ej. Carlos Mendoza" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="quote-phone">Teléfono Móvil (WhatsApp)</label>
+                    <input type="tel" id="quote-phone" class="form-input" placeholder="Ej. 3001234567" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="quote-email">Correo Electrónico</label>
+                    <input type="email" id="quote-email" class="form-input" placeholder="Ej. carlos@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="quote-message">Notas adicionales o cantidades a solicitar</label>
+                    <textarea id="quote-message" class="form-textarea" placeholder="Ej. Solicito 10 cajas de este producto para una IPS..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Solicitar Cotización por WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 2: E-commerce Checkout -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-card glass-panel">
+            <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+            <div class="modal-header">
+                <h3>Detalles de tu Envío</h3>
+                <p>Completa la información para que un asesor valide las tarifas de envío y concrete tu despacho.</p>
+            </div>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label class="form-label" for="co-name">Nombre Completo del Destinatario</label>
+                    <input type="text" id="co-name" class="form-input" placeholder="Ej. Liliana Restrepo" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="co-phone">Teléfono Móvil (WhatsApp)</label>
+                    <input type="tel" id="co-phone" class="form-input" placeholder="Ej. 3109876543" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="co-email">Correo Electrónico</label>
+                    <input type="email" id="co-email" class="form-input" placeholder="Ej. liliana@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="co-address">Dirección Completa de Envío</label>
+                    <input type="text" id="co-address" class="form-input" placeholder="Ej. Calle 10 # 43A - 15 Apto 302" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="co-city">Ciudad / Municipio</label>
+                    <input type="text" id="co-city" class="form-input" placeholder="Ej. Medellín (Antioquia)" required>
+                </div>
+                <button type="submit" class="btn btn-secondary" style="width: 100%;">Confirmar y Enviar Pedido a WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 3: Success Confirmation -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-card glass-panel" style="text-align: center; max-width: 440px;">
+            <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+            <div class="success-checkmark">
+                <div class="check-icon">
+                    <span class="icon-line line-tip"></span>
+                    <span class="icon-line line-long"></span>
+                </div>
+            </div>
+            <h3 id="success-title" style="margin-bottom: 12px; font-size: 1.6rem;">¡Transacción Exitosa!</h3>
+            <p id="success-message" style="color: var(--text-secondary); line-height: 1.5; font-size: 0.95rem;">Tu mensaje ha sido enviado correctamente.</p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
