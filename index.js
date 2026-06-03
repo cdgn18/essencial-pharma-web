@@ -172,7 +172,7 @@ const DERMO_PRODUCTS = [
 
 // App State
 let cart = JSON.parse(localStorage.getItem('ep_cart')) || [];
-let activeTab = 'all';
+let activeTab = 'analgesicos';
 let searchQuery = '';
 
 // DOM Elements
