@@ -10,10 +10,20 @@
 </head>
 <body>
 
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-track">
+            <span>🐾 ¡NUEVA LÍNEA VETERINARIA DISPONIBLE! Cuidado premium para mascotas respaldado por ciencia.</span>
+            <span>🌿 LÍNEA CAPILAR DERMOCOSMÉTICA: Tratamientos para la salud folicular y brillo de tu cabello.</span>
+            <span>🚚 ENVÍOS A TODA COLOMBIA: Compras seguras con entrega rápida nacional.</span>
+        </div>
+    </div>
+
     <!-- Header Navigation -->
     <header class="header">
         <div class="container">
             <a href="#inicio" class="logo" style="display: flex; align-items: center;">
+                <img src="https://www.essencialpharma.com.co/wp-content/uploads/2025/12/cropped-logo-essencial-fharma_Essencial-Pharma-Horizontal-1-1-32x32.png" style="margin-right: 8px; border-radius: 4px; display: none;" alt="">
                 <img src="https://www.essencialpharma.com.co/wp-content/uploads/2025/12/logo-essencial-fharma_Essencial-Pharma-Horizontal-1-1.png" alt="Essencial Pharma Logo">
             </a>
 
@@ -21,7 +31,7 @@
                 <a href="#inicio" class="nav-link active">Inicio</a>
                 <a href="#servicios" class="nav-link">Servicios</a>
                 <a href="#medicamentos" class="nav-link">Medicamentos</a>
-                <a href="#dermocosmetica" class="nav-link">Dermocosmética</a>
+                <a href="#dermocosmetica" class="nav-link">Tienda</a>
                 <a href="#compromiso" class="nav-link">Compromiso</a>
                 <a href="#nosotros" class="nav-link">Nosotros</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
@@ -62,9 +72,9 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <span class="section-tag">Distribución Profesional</span>
-                    <h1>Soluciones farmacéuticas integrales para el sector salud</h1>
-                    <p>Proveemos medicamentos esenciales de la más alta calidad y fórmulas magistrales en oftalmología. Además, te presentamos nuestra nueva línea capilar dermocosmética premium con venta directa.</p>
+                    <span class="section-tag">Distribución Profesional e Innovación</span>
+                    <h1>Soluciones farmacéuticas y cuidado integral</h1>
+                    <p>Proveemos medicamentos esenciales de alta calidad y fórmulas magistrales oftálmicas. Descubre también nuestras líneas premium de venta libre en dermocosmética capilar y cuidado de mascotas.</p>
                     <div class="hero-btns">
                         <a href="#medicamentos" class="btn btn-primary">
                             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
@@ -72,14 +82,29 @@
                         </a>
                         <a href="#dermocosmetica" class="btn btn-secondary">
                             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-                            Tienda Dermocosmética
+                            Explorar Tienda
                         </a>
                     </div>
                 </div>
 
                 <div class="hero-visual">
                     <div class="hero-visual-bg"></div>
-                    <img src="https://www.essencialpharma.com.co/wp-content/uploads/2025/12/Rectangle-10-1.png" alt="Essencial Pharma Hero Image" class="hero-image">
+                    <div class="hero-slider">
+                        <div class="hero-slide active">
+                            <img src="https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&q=80&w=800" alt="Medicamentos Esenciales" class="hero-image">
+                        </div>
+                        <div class="hero-slide">
+                            <img src="https://images.unsplash.com/photo-1527799851257-6592a8868343?auto=format&fit=crop&q=80&w=800" alt="Dermocosmética Capilar" class="hero-image">
+                        </div>
+                        <div class="hero-slide">
+                            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=800" alt="Línea Veterinaria" class="hero-image">
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                        </div>
+                    </div>
                     
                     <!-- Floating Badge 1 -->
                     <div class="hero-badge-float glass-panel">
@@ -87,19 +112,19 @@
                             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
                         </div>
                         <div class="hero-badge-info">
-                            <h4>Normas INVIMA & OMS</h4>
-                            <p>Garantía de calidad</p>
+                            <h4>Normas INVIMA & ICA</h4>
+                            <p>Calidad regulada en Colombia</p>
                         </div>
                     </div>
 
                     <!-- Floating Badge 2 -->
                     <div class="hero-badge-float top-right glass-panel">
                         <div class="hero-badge-icon">
-                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                         </div>
                         <div class="hero-badge-info">
-                            <h4>Línea Capilar</h4>
-                            <p>Nueva categoría dermo</p>
+                            <h4>Salud & Bienestar</h4>
+                            <p>Humano y veterinario</p>
                         </div>
                     </div>
                 </div>
@@ -209,15 +234,24 @@
         </div>
     </section>
 
-    <!-- Dermocosmetics Section -->
+    <!-- Dermocosmetics & Vet Section -->
     <section class="section dermo-section" id="dermocosmetica">
         <div class="container">
             <div class="section-title-wrap">
-                <span class="section-tag" style="color: var(--color-accent);">Línea Capilar Premium</span>
-                <h2 class="section-title">Tienda Dermocosmética</h2>
-                <p class="section-desc">Tratamientos científicos capilares de uso diario para restaurar, nutrir y fortalecer tu cabello. Disponibles para compra inmediata en línea con despacho nacional.</p>
+                <span class="section-tag" style="color: var(--color-accent);">Bienestar e Higiene Premium</span>
+                <h2 class="section-title">Tienda de Venta Libre</h2>
+                <p class="section-desc">Soluciones científicas capilares y productos especializados de cuidado veterinario. Compra directa en línea con despacho rápido en todo el país.</p>
             </div>
 
+            <!-- Shop Category Tabs -->
+            <div class="catalog-controls" style="margin-bottom: 40px;">
+                <div class="catalog-tabs">
+                    <button class="tab-btn active" data-shop-tab="all">Todos los Productos</button>
+                    <button class="tab-btn" data-shop-tab="dermocosmetica">Dermocosmética Capilar</button>
+                    <button class="tab-btn" data-shop-tab="veterinaria">Línea Veterinaria</button>
+                </div>
+            </div>
+ 
             <!-- Products Grid -->
             <div class="product-grid">
                 <!-- Rendered Dynamically by JS -->

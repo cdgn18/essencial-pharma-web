@@ -141,6 +141,7 @@ const DERMO_PRODUCTS = [
     {
         id: "dermo-1",
         name: "Shampoo Revitalizante Capilar",
+        category: "dermocosmetica",
         desc: "Fórmula dermocosmética avanzada para limpiar suavemente, fortalecer los folículos pilosos y estimular el crecimiento. pH balanceado.",
         price: 45000,
         image: "images/dermo_shampoo.png",
@@ -151,6 +152,7 @@ const DERMO_PRODUCTS = [
     {
         id: "dermo-2",
         name: "Tónico Anticaída Estimulante",
+        category: "dermocosmetica",
         desc: "Tratamiento intensivo en gotas para el cuero cabelludo. Activa la microcirculación, reduce la caída y densifica la fibra capilar.",
         price: 55000,
         image: "images/dermo_tonico.png",
@@ -161,18 +163,53 @@ const DERMO_PRODUCTS = [
     {
         id: "dermo-3",
         name: "Tratamiento Nutritivo Intensivo",
+        category: "dermocosmetica",
         desc: "Mascarilla reparadora enriquecida con aminoácidos y lípidos biomiméticos. Hidrata profundamente y restaura el brillo natural.",
         price: 60000,
         image: "images/dermo_tratamiento.png",
         rating: 4.7,
         reviewsCount: 88,
         badge: "MÁS VENDIDO"
+    },
+    {
+        id: "vet-1",
+        name: "Shampoo Dermoprotector Mascotas",
+        category: "veterinaria",
+        desc: "Fórmula hipoalergénica con extracto de avena y aloe vera para pieles sensibles. Ideal para baño frecuente en perros y gatos.",
+        price: 38000,
+        image: "https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=600",
+        rating: 4.9,
+        reviewsCount: 42,
+        badge: "VETERINARIO"
+    },
+    {
+        id: "vet-2",
+        name: "Suplemento Nutricional Canino",
+        category: "veterinaria",
+        desc: "Suplemento rico en Omega 3, 6, vitaminas y minerales. Promueve la salud articular y un pelaje brillante y sedoso.",
+        price: 52000,
+        image: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=600",
+        rating: 4.8,
+        reviewsCount: 29,
+        badge: "DESTACADO"
+    },
+    {
+        id: "vet-3",
+        name: "Bálsamo Reparador de Almohadillas",
+        category: "veterinaria",
+        desc: "Ungüento 100% natural a base de cera de abejas y karité. Hidrata, protege y repara almohadillas plantares secas o agrietadas.",
+        price: 25000,
+        image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=600",
+        rating: 4.7,
+        reviewsCount: 15,
+        badge: "RECOMENDADO"
     }
 ];
 
 // App State
 let cart = JSON.parse(localStorage.getItem('ep_cart')) || [];
 let activeTab = 'analgesicos';
+let shopActiveTab = 'all';
 let searchQuery = '';
 
 // DOM Elements
@@ -199,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
-            nav.classList.remove('active');
+            nav.classList.toggle('active');
         });
     });
 
@@ -239,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMedicines();
 
     // Tab filtering logic
-    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabButtons = document.querySelectorAll('.tab-btn[data-tab]');
     tabButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             tabButtons.forEach(b => b.classList.remove('active'));
@@ -255,6 +292,54 @@ document.addEventListener('DOMContentLoaded', () => {
         searchQuery = e.target.value.toLowerCase().trim();
         renderMedicines();
     });
+
+    // Shop tab filtering logic
+    const shopTabButtons = document.querySelectorAll('[data-shop-tab]');
+    shopTabButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            shopTabButtons.forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            shopActiveTab = e.target.dataset.shopTab;
+            renderDermoProducts();
+        });
+    });
+
+    // Hero Slider AutoPlay
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.slider-dots .dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        if (slides[index]) slides[index].classList.add('active');
+        if (dots[index]) dots[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        if (slides.length > 0) {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+    }
+
+    function startSlideShow() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    if (slides.length > 0) {
+        startSlideShow();
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                clearInterval(slideInterval);
+                const index = parseInt(e.target.dataset.slide);
+                showSlide(index);
+                startSlideShow();
+            });
+        });
+    }
 
     // Initialize Dermocosmetics Shop
     renderDermoProducts();
@@ -308,7 +393,11 @@ function renderMedicines() {
 function renderDermoProducts() {
     const grid = document.querySelector('.product-grid');
     
-    grid.innerHTML = DERMO_PRODUCTS.map(prod => {
+    const filtered = DERMO_PRODUCTS.filter(prod => {
+        return shopActiveTab === 'all' || prod.category === shopActiveTab;
+    });
+    
+    grid.innerHTML = filtered.map(prod => {
         // Generate stars icons HTML
         let starsHTML = '';
         const fullStars = Math.floor(prod.rating);
