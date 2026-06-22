@@ -42,7 +42,7 @@
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
-    --header-height: 90px;
+    --header-height: 108px;
     --hero-overlay: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 16%), linear-gradient(to right, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.42) 42%, rgba(0,0,0,0.12) 68%, transparent 100%);
 }
 
@@ -251,7 +251,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 28px;
+    gap: 36px;
 }
 
 .nav-right {
@@ -260,7 +260,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 28px;
+    gap: 36px;
 }
 
 .header .logo {
@@ -303,7 +303,7 @@ img {
 }
 
 .logo img {
-    height: 80px;
+    height: 104px;
     width: auto;
     object-fit: contain;
     transition: var(--transition-smooth);
@@ -311,7 +311,7 @@ img {
 }
 
 .header.scrolled .logo img {
-    height: 50px;
+    height: 62px;
     filter: none;
 }
 
@@ -320,7 +320,7 @@ img {
 .nav-link {
     font-family: var(--font-primary);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
     position: relative;
     padding: 6px 0;
@@ -1630,6 +1630,12 @@ img {
     .header .container {
         display: flex;
         justify-content: space-between;
+    }
+    .logo img {
+        height: 80px;
+    }
+    .header.scrolled .logo img {
+        height: 52px;
     }
     .section {
         padding: 60px 0;
