@@ -34,15 +34,15 @@
             </nav>
         </div>
 
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="logo" style="display:flex;align-items:center;">
-            <?php
-            if (has_custom_logo()) {
-                the_custom_logo();
-            } else {
-                echo '<img src="' . esc_url(get_template_directory_uri()) . '/assets/images/logo.png" alt="' . esc_attr(get_bloginfo('name')) . '">';
-            }
-            ?>
+        <?php if (has_custom_logo()) : ?>
+        <div class="logo" style="display:flex;align-items:center;justify-content:center;">
+            <?php the_custom_logo(); ?>
+        </div>
+        <?php else : ?>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="logo" style="display:flex;align-items:center;justify-content:center;">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo.png" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
         </a>
+        <?php endif; ?>
 
         <div class="nav-actions">
             <!-- Theme Toggle -->
