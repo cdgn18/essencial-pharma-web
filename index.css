@@ -42,8 +42,8 @@
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
-    --header-height: 70px;
-    --hero-overlay: linear-gradient(to right, rgba(248, 250, 252, 0.95) 35%, rgba(248, 250, 252, 0.6) 70%, rgba(248, 250, 252, 0.15) 100%);
+    --header-height: 90px;
+    --hero-overlay: linear-gradient(to bottom, rgba(0,0,0,0.42) 0%, transparent 20%), linear-gradient(110deg, rgba(1, 39, 65, 0.72) 0%, rgba(1, 39, 65, 0.38) 48%, rgba(1, 39, 65, 0.08) 72%, transparent 100%);
 }
 
 /* Dark Mode Tokens */
@@ -65,7 +65,7 @@
     --shadow-md: 0 12px 20px -8px rgba(0,0,0,0.4);
     --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.5);
     --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    --hero-overlay: linear-gradient(to right, rgba(9, 15, 29, 0.95) 35%, rgba(9, 15, 29, 0.6) 70%, rgba(9, 15, 29, 0.15) 100%);
+    --hero-overlay: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 20%), linear-gradient(110deg, rgba(9, 15, 29, 0.9) 0%, rgba(9, 15, 29, 0.58) 48%, rgba(9, 15, 29, 0.15) 72%, transparent 100%);
 }
 
 html {
@@ -240,14 +240,16 @@ img {
 }
 
 .logo img {
-    height: 42px;
+    height: 58px;
     width: auto;
     object-fit: contain;
     transition: var(--transition-smooth);
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
 }
 
 .header.scrolled .logo img {
-    height: 36px;
+    height: 40px;
+    filter: none;
 }
 
 .nav {
@@ -1461,7 +1463,7 @@ img {
 .hero.full-banner {
     position: relative;
     width: 100%;
-    min-height: 85vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1512,12 +1514,12 @@ img {
     position: relative;
     z-index: 4;
     width: 100%;
-    min-height: 85vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: calc(var(--header-height) + 50px);
-    padding-bottom: 80px;
+    padding-top: calc(var(--header-height) + 60px);
+    padding-bottom: 100px;
 }
 
 .hero-banner-content {
@@ -1527,21 +1529,51 @@ img {
 }
 
 .hero-banner-title {
-    font-size: 3.5rem;
+    font-size: 4.2rem;
     font-weight: 800;
     margin-bottom: 24px;
-    line-height: 1.15;
-    color: var(--text-primary);
+    line-height: 1.1;
+    color: #ffffff;
     letter-spacing: -0.5px;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.3);
 }
 
 .hero-banner-desc {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.88);
     margin-bottom: 40px;
-    line-height: 1.5;
+    line-height: 1.6;
     font-weight: 400;
-    max-width: 650px;
+    max-width: 620px;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.2);
+}
+
+/* Hero: logo brand card over the banner */
+.hero-brand-logo {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--radius-md);
+    padding: 14px 28px;
+    margin-bottom: 36px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.28), 0 2px 8px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.7);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-brand-logo img {
+    height: 56px;
+    width: auto;
+    display: block;
+}
+
+/* Override section-tag color inside hero for contrast on dark overlay */
+.hero-banner-content .section-tag {
+    color: var(--color-secondary-light);
+    letter-spacing: 2.5px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 .hero-banner-badges {
@@ -1608,18 +1640,18 @@ img {
 
 @media (max-width: 992px) {
     .hero.full-banner {
-        min-height: auto;
+        min-height: 100vh;
     }
     .hero-banner-container {
-        min-height: auto;
+        min-height: 100vh;
         padding-top: calc(var(--header-height) + 60px);
-        padding-bottom: 60px;
+        padding-bottom: 80px;
     }
     .hero-banner-title {
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
     .hero-banner-desc {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
     }
     .hero-banner-badges {
         margin-top: 30px;
@@ -1628,13 +1660,20 @@ img {
 
 @media (max-width: 768px) {
     :root {
-        --hero-overlay: linear-gradient(to bottom, rgba(248, 250, 252, 0.97) 50%, rgba(248, 250, 252, 0.8) 80%, rgba(248, 250, 252, 0.6) 100%);
+        --hero-overlay: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(1,39,65,0.65) 40%, rgba(1,39,65,0.5) 100%);
     }
     [data-theme="dark"] {
-        --hero-overlay: linear-gradient(to bottom, rgba(9, 15, 29, 0.97) 50%, rgba(9, 15, 29, 0.8) 80%, rgba(9, 15, 29, 0.6) 100%);
+        --hero-overlay: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(9,15,29,0.78) 40%, rgba(9,15,29,0.65) 100%);
     }
     .hero-banner-title {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
+    }
+    .hero-brand-logo img {
+        height: 44px;
+    }
+    .hero-brand-logo {
+        padding: 12px 22px;
+        margin-bottom: 28px;
     }
     .hero-banner-desc {
         font-size: 1rem;
