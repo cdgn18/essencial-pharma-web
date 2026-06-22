@@ -1,0 +1,14 @@
+/*
+Theme Name: Essencial Pharma
+Theme URI: https://essencialpharma.com.co
+Author: Antigravity Studio
+Description: Tema personalizado para Essencial Pharma – distribución farmacéutica y dermocosmética premium en Colombia. Integra WooCommerce con diseño propio.
+Version: 1.0.0
+Requires at least: 6.2
+Requires PHP: 8.0
+License: Privado
+Text Domain: essencial-pharma
+WC requires at least: 8.0
+WC tested up to: 9.9
+*/
+/* Los estilos reales están en assets/css/main.css, cargados desde functions.php */
