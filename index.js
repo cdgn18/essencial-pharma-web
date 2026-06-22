@@ -226,17 +226,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav');
+    const navWrap = document.querySelector('.nav-mobile-wrap');
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
-        nav.classList.toggle('active');
+        navWrap.classList.toggle('active');
     });
 
     // Close mobile menu when a link is clicked
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
-            nav.classList.toggle('active');
+            navWrap.classList.remove('active');
         });
     });
 
