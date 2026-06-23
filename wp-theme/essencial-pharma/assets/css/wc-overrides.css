@@ -46,43 +46,63 @@ ul.products li.product .button, ul.products li.product a.add_to_cart_button {
 }
 ul.products li.product .button:hover, ul.products li.product a.add_to_cart_button:hover { background: var(--color-primary-dark); transform: translateY(-1px); }
 
-/* WC Single Product — grid: image | summary, then tabs & related span full width */
+/* WC Single Product — 2-col grid */
 .woocommerce div.product {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: start;
 }
-/* Image */
-.woocommerce div.product div.images { position: relative; }
-.woocommerce div.product div.images img,
-.woocommerce-product-gallery__image img {
-    border-radius: var(--radius-lg); width: 100%; height: auto;
-    max-height: 560px; object-fit: contain;
+
+/* Product gallery — force full column width */
+.woocommerce-product-gallery {
+    width: 100% !important;
+    float: none !important;
 }
+.woocommerce-product-gallery .flex-viewport,
+.woocommerce-product-gallery figure { width: 100% !important; }
+.woocommerce-product-gallery__image,
+.woocommerce-product-gallery__image img,
+.woocommerce div.product div.images img {
+    width: 100% !important; height: auto;
+    max-height: 520px; object-fit: contain;
+    border-radius: var(--radius-lg);
+}
+
 /* Summary */
+.woocommerce div.product .summary { float: none !important; width: 100% !important; }
 .woocommerce div.product .product_title { font-size: 2rem; font-weight: 800; margin-bottom: 12px; color: var(--text-primary); }
 .woocommerce div.product .price { font-size: 1.8rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 20px; }
 .woocommerce div.product .woocommerce-product-details__short-description { color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+.woocommerce div.product form.cart { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
 .woocommerce div.product form.cart .qty {
     font-family: var(--font-primary); font-size: 1rem; font-weight: 600;
     border: 1px solid var(--border-glass); border-radius: var(--radius-sm);
-    padding: 10px 16px; width: 80px; background: var(--bg-glass); color: var(--text-primary); margin-right: 12px;
+    padding: 10px 16px; width: 80px; background: var(--bg-glass); color: var(--text-primary);
 }
-/* Tabs (Description / Reviews) — span all columns */
-.woocommerce-tabs, .related.products, .up-sells.products {
-    grid-column: 1 / -1;
+
+/* Tabs + Related products — span full grid width */
+.woocommerce div.product .woocommerce-tabs,
+.woocommerce section.related,
+.woocommerce section.upsells,
+.woocommerce .related.products,
+.woocommerce .up-sells.products {
+    grid-column: 1 / -1 !important;
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
     margin-top: 48px;
     padding-top: 48px;
     border-top: 1px solid var(--border-glass);
 }
+
 /* Tab nav */
 .woocommerce-tabs ul.tabs {
-    list-style: none; display: flex; gap: 0; padding: 0; margin: 0 0 32px;
+    list-style: none !important; display: flex; gap: 0; padding: 0; margin: 0 0 32px;
     border-bottom: 2px solid var(--border-glass);
 }
-.woocommerce-tabs ul.tabs li { margin: 0; background: none; border: none; padding: 0; }
-.woocommerce-tabs ul.tabs li::before { display: none; }
+.woocommerce-tabs ul.tabs li { margin: 0 !important; background: none !important; border: none !important; padding: 0 !important; }
+.woocommerce-tabs ul.tabs li::before { display: none !important; }
 .woocommerce-tabs ul.tabs li a {
     display: block; padding: 10px 24px; font-weight: 600; font-size: 0.95rem;
     color: var(--text-secondary); text-decoration: none;
@@ -109,16 +129,21 @@ ul.products li.product .button:hover, ul.products li.product a.add_to_cart_butto
 #review_form .comment-form-author,
 #review_form .comment-form-email { display: inline-block; width: calc(50% - 8px); }
 #review_form .comment-form-email { margin-left: 16px; }
-.comment-reply-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary); }
 
-/* Related products */
+/* Related products grid — override WC float-based layout */
 .related.products > h2, .up-sells.products > h2 {
     font-size: 1.5rem; font-weight: 800; margin-bottom: 28px; color: var(--text-primary);
 }
-/* Fix button text wrapping in related product cards */
-ul.products li.product .button,
-ul.products li.product a.add_to_cart_button {
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+.related.products ul.products,
+.up-sells.products ul.products {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+    gap: 24px !important; float: none !important; width: 100% !important;
+}
+.related.products ul.products li.product,
+.up-sells.products ul.products li.product {
+    float: none !important; width: auto !important;
+    max-width: none !important; margin: 0 !important; clear: none !important;
 }
 
 /* WC Buttons (global) */
