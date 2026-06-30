@@ -1948,3 +1948,132 @@ img {
     }
 }
 
+/* ── Stats Strip ─────────────────────────────────────────────────────────────── */
+.stats-strip {
+    background: var(--color-primary);
+    padding: 44px 0;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 16px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    font-family: var(--font-primary);
+}
+.stat-label {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* ── Certifications Section ──────────────────────────────────────────────────── */
+.cert-section {
+    background: linear-gradient(135deg, #011c33 0%, #014f82 55%, #012036 100%);
+}
+.cert-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+.cert-img-col { position: relative; }
+.cert-img-wrap { position: relative; }
+.cert-main-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    display: block;
+}
+.cert-img-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-glass);
+}
+.cert-img-badge strong { display: block; font-size: 0.9rem; color: var(--text-primary); }
+.cert-img-badge span  { font-size: 0.8rem; color: var(--text-secondary); }
+
+.cert-content .section-tag { color: var(--color-secondary); }
+.cert-content .section-title { color: #fff; }
+.cert-content > p { color: rgba(255,255,255,0.7); }
+
+.cert-badges-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.cert-badge-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    transition: var(--transition-fast);
+}
+.cert-badge-item:hover {
+    background: rgba(0,208,132,0.08);
+    border-color: rgba(0,208,132,0.35);
+    transform: translateY(-2px);
+}
+.cert-badge-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: rgba(0,208,132,0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    position: relative;
+}
+.cert-badge-item h4 {
+    color: #fff;
+    font-size: 0.92rem;
+    margin: 0 0 4px;
+    font-weight: 700;
+}
+.cert-badge-item p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+    .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.15); }
+    .stat-item:last-child, .stat-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+    .cert-layout { grid-template-columns: 1fr; gap: 48px; }
+    .cert-img-wrap { margin-bottom: 24px; }
+    .cert-img-badge { right: 0; bottom: -16px; }
+    .cert-badges-grid { grid-template-columns: 1fr; }
+}
+

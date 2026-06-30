@@ -4,7 +4,7 @@
 <section class="hero full-banner" id="inicio">
     <div class="hero-bg-slider">
         <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&q=80&w=1600');"></div>
-        <div class="hero-slide" style="background-image:url('<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Gemini_Generated_Image_rdy7fyrdy7fyrdy7.png');"></div>
+        <div class="hero-slide" style="background-image:url('<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Rectangle-21.png');"></div>
         <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=1600');"></div>
     </div>
 
@@ -47,6 +47,30 @@
         </div>
     </div>
 </section>
+
+<!-- Stats Strip -->
+<div class="stats-strip">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-num">+5</span>
+                <span class="stat-label">Años de Experiencia</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">+100</span>
+                <span class="stat-label">Clientes Institucionales</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">4</span>
+                <span class="stat-label">Líneas Especializadas</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Cobertura Nacional</span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Services Section -->
 <section class="section" id="servicios" style="background:var(--bg-secondary);">
@@ -344,6 +368,89 @@
                 <div class="feat-icon-wrap"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div>
                 <h3 class="feat-title">Soporte Técnico Continuo</h3>
                 <p class="feat-desc">Atención personalizada y acompañamiento constante por regentes farmacéuticos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications & Regulatory Compliance -->
+<section class="section cert-section" id="certificaciones">
+    <div class="container">
+        <div class="cert-layout">
+            <div class="cert-img-col">
+                <div class="cert-img-wrap">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Rectangle-11.png" alt="Laboratorio farmacéutico certificado Essencial Pharma" class="cert-main-img" loading="lazy">
+                    <div class="cert-img-badge">
+                        <div class="cert-badge-icon" style="background:rgba(0,208,132,0.15);">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div>
+                            <strong>Regulación Sanitaria</strong>
+                            <span>Colombiana e Internacional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cert-content">
+                <span class="section-tag">Cumplimiento Normativo</span>
+                <h2 class="section-title" style="text-align:left;margin-top:12px;">Certificaciones que respaldan cada producto</h2>
+                <p style="color:var(--text-secondary);margin:16px 0 36px;font-size:1rem;line-height:1.7;">Nuestros medicamentos, cosméticos y productos veterinarios operan bajo la regulación más exigente de Colombia e instituciones internacionales de salud. Cada lote distribuido pasa por controles rigurosos de calidad, autenticidad y trazabilidad.</p>
+                <div class="cert-badges-grid">
+                    <div class="cert-badge-item">
+                        <div class="cert-badge-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div>
+                            <h4>INVIMA</h4>
+                            <p>Registro sanitario y vigilancia de todos los productos distribuidos en Colombia</p>
+                        </div>
+                    </div>
+                    <div class="cert-badge-item">
+                        <div class="cert-badge-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path></svg>
+                        </div>
+                        <div>
+                            <h4>OMS / WHO</h4>
+                            <p>Medicamentos avalados por la Organización Mundial de la Salud</p>
+                        </div>
+                    </div>
+                    <div class="cert-badge-item">
+                        <div class="cert-badge-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4>ICA</h4>
+                            <p>Certificación veterinaria del Instituto Colombiano Agropecuario para línea animal</p>
+                        </div>
+                    </div>
+                    <div class="cert-badge-item">
+                        <div class="cert-badge-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <div>
+                            <h4>BPM / BPA</h4>
+                            <p>Buenas Prácticas de Manufactura y Almacenamiento certificadas internacionalmente</p>
+                        </div>
+                    </div>
+                    <div class="cert-badge-item">
+                        <div class="cert-badge-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path></svg>
+                        </div>
+                        <div>
+                            <h4>Cadena de Frío</h4>
+                            <p>Control certificado de temperatura en almacenamiento y transporte de biológicos</p>
+                        </div>
+                    </div>
+                    <div class="cert-badge-item">
+                        <div class="cert-badge-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        </div>
+                        <div>
+                            <h4>Trazabilidad Digital</h4>
+                            <p>Seguimiento lote a lote desde el origen hasta el punto de entrega final</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

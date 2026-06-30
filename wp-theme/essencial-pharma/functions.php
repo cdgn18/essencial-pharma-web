@@ -32,10 +32,10 @@ function ep_enqueue_assets() {
     );
 
     // Main CSS
-    wp_enqueue_style('ep-main', get_template_directory_uri() . '/assets/css/main.css', ['ep-fonts'], '1.2.0');
+    wp_enqueue_style('ep-main', get_template_directory_uri() . '/assets/css/main.css', ['ep-fonts'], '1.3.0');
 
     // WooCommerce overrides
-    wp_enqueue_style('ep-wc', get_template_directory_uri() . '/assets/css/wc-overrides.css', ['ep-main'], '1.2.0');
+    wp_enqueue_style('ep-wc', get_template_directory_uri() . '/assets/css/wc-overrides.css', ['ep-main'], '1.3.0');
 
     // Main JS (depends on jquery which WP loads for WooCommerce)
     wp_enqueue_script('ep-main', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], '1.0.0', true);
