@@ -233,43 +233,52 @@ img {
     height: 60px;
 }
 
+/* 3-column grid guarantees logo is always at true center */
 .header .container {
     height: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
 }
 
-/* On desktop the wrapper is transparent — children become flex items */
+/* Mobile overlay — hidden on desktop */
 .nav-mobile-wrap {
-    display: contents;
+    display: none;
 }
 
+/* Col 1: left nav links flush to center */
 .nav-left {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 36px;
-    flex-shrink: 0;
+}
+
+/* Col 2: logo centered in its auto-width column */
+.header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Col 3: right nav + icons flush from center */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-right {
     display: flex;
     align-items: center;
     gap: 36px;
-    flex-shrink: 0;
-    margin-left: auto;
-}
-
-/* Logo absolutely centered in the header regardless of nav widths */
-.header .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
 }
 
 .header .nav-actions {
-    justify-content: flex-end;
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     flex-shrink: 0;
 }
 
@@ -1629,6 +1638,7 @@ img {
     .header .container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     .logo img {
         height: 80px;
@@ -1642,6 +1652,14 @@ img {
     .hero-content h1 {
         font-size: 2.4rem;
     }
+    /* Hide desktop navs on mobile */
+    .nav-left {
+        display: none;
+    }
+    .nav-right {
+        display: none;
+    }
+    /* Mobile overlay */
     .nav-mobile-wrap {
         display: flex;
         flex-direction: column;
@@ -1660,17 +1678,13 @@ img {
     .nav-mobile-wrap.active {
         left: 0;
     }
-    .nav-left, .nav-right {
+    .nav-mobile-links {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 28px;
         width: 100%;
         padding: 16px 0;
-    }
-    .nav-left {
-        justify-content: flex-end;
-        border-bottom: 1px solid var(--border-glass);
     }
     .hamburger {
         display: flex;
