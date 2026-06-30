@@ -259,11 +259,13 @@ img {
     margin-left: auto;
 }
 
-/* Logo pinned to the true viewport center via the fixed header as containing block */
+/* Logo centered using left:0 right:0 margin:auto — works regardless of containing block */
 .header .logo {
     position: absolute;
-    left: 50vw;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: 0 auto;
     z-index: 1;
 }
 
