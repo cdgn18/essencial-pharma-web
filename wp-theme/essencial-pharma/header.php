@@ -25,9 +25,9 @@
                 <a href="<?php echo esc_url(home_url('/#inicio')); ?>" class="nav-link">Inicio</a>
                 <a href="<?php echo esc_url(home_url('/#servicios')); ?>" class="nav-link">Servicios</a>
                 <a href="<?php echo esc_url(home_url('/#medicamentos')); ?>" class="nav-link">Medicamentos</a>
+                <a href="<?php echo esc_url(home_url('/#dermocosmetica')); ?>" class="nav-link">Tienda</a>
             </nav>
             <nav class="nav-right">
-                <a href="<?php echo esc_url(home_url('/#dermocosmetica')); ?>" class="nav-link">Tienda</a>
                 <a href="<?php echo esc_url(home_url('/#compromiso')); ?>" class="nav-link">Compromiso</a>
                 <a href="<?php echo esc_url(home_url('/#quienes-somos')); ?>" class="nav-link">Nosotros</a>
                 <a href="<?php echo esc_url(home_url('/#contacto')); ?>" class="nav-link">Contacto</a>
