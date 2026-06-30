@@ -394,7 +394,7 @@
             <div class="cert-content">
                 <span class="section-tag">Cumplimiento Normativo</span>
                 <h2 class="section-title" style="text-align:left;margin-top:12px;">Certificaciones que respaldan cada producto</h2>
-                <p style="color:var(--text-secondary);margin:16px 0 36px;font-size:1rem;line-height:1.7;">Nuestros medicamentos, cosméticos y productos veterinarios operan bajo la regulación más exigente de Colombia e instituciones internacionales de salud. Cada lote distribuido pasa por controles rigurosos de calidad, autenticidad y trazabilidad.</p>
+                <p style="color:rgba(255,255,255,0.82);margin:16px 0 36px;font-size:1rem;line-height:1.7;">Nuestros medicamentos, cosméticos y productos veterinarios operan bajo la regulación más exigente de Colombia e instituciones internacionales de salud. Cada lote distribuido pasa por controles rigurosos de calidad, autenticidad y trazabilidad.</p>
                 <div class="cert-badges-grid">
                     <div class="cert-badge-item">
                         <div class="cert-badge-icon">
