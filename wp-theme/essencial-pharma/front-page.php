@@ -349,36 +349,44 @@
     </div>
 </section>
 
-<!-- About & Contact -->
+<!-- Quiénes Somos -->
 <section class="section" id="nosotros">
     <div class="container">
         <div class="contact-split">
-            <div class="contact-info-panel">
-                <div>
-                    <span class="section-tag">¿Quiénes Somos?</span>
-                    <h2 class="section-title">Comprometidos con la Salud en Colombia</h2>
-                    <p style="color:var(--text-secondary);margin-top:20px;font-size:1.05rem;">En <strong>Essencial Pharma</strong> somos aliados estratégicos del sector salud. Nos especializamos en la distribución de medicamentos esenciales que cumplen estrictas normas sanitarias globales y en el desarrollo de fórmulas magistrales oftálmicas adaptadas a necesidades individuales no comerciales.</p>
-                    <p style="color:var(--text-secondary);margin-top:16px;font-size:1.05rem;">Bajo la visión de ofrecer cuidado integral, ampliamos nuestro portafolio con soluciones dermocosméticas capilares premium, respaldadas por investigación clínica para la salud folicular diaria.</p>
+            <div>
+                <span class="section-tag">¿Quiénes Somos?</span>
+                <h2 class="section-title">Comprometidos con la Salud en Colombia</h2>
+                <p style="color:var(--text-secondary);margin-top:20px;font-size:1.05rem;">En <strong>Essencial Pharma</strong> somos aliados estratégicos del sector salud. Nos especializamos en la distribución de medicamentos esenciales que cumplen estrictas normas sanitarias globales y en el desarrollo de fórmulas magistrales oftálmicas adaptadas a necesidades individuales no comerciales.</p>
+                <p style="color:var(--text-secondary);margin-top:16px;font-size:1.05rem;">Bajo la visión de ofrecer cuidado integral, ampliamos nuestro portafolio con soluciones dermocosméticas capilares premium, respaldadas por investigación clínica para la salud folicular diaria.</p>
+            </div>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg></div>
+                    <div class="contact-text"><h5>Teléfono / WhatsApp</h5><p>(+57) 305 339 8870</p></div>
                 </div>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg></div>
-                        <div class="contact-text"><h5>Teléfono / WhatsApp</h5><p>(+57) 305 339 8870</p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
-                        <div class="contact-text"><h5>E-Mail de Contacto</h5><p>info@essencialpharma.com.co</p></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
-                        <div class="contact-text"><h5>Ubicación</h5><p>Carrera 25 # 9A sur 176 — Medellín, Colombia</p></div>
-                    </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
+                    <div class="contact-text"><h5>E-Mail de Contacto</h5><p>info@essencialpharma.com.co</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
+                    <div class="contact-text"><h5>Ubicación</h5><p>Carrera 25 # 9A sur 176 — Medellín, Colombia</p></div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
 
-            <div class="glass-panel" id="contacto" style="padding:40px;">
-                <h3 style="margin-bottom:8px;font-size:1.6rem;">¿Dudas o requerimientos?</h3>
-                <p style="color:var(--text-secondary);margin-bottom:24px;font-size:0.9rem;">Envíanos un mensaje rápido y nos pondremos en contacto vía WhatsApp de inmediato.</p>
+<!-- Contacto -->
+<section class="section" id="contacto" style="background:var(--bg-secondary);">
+    <div class="container">
+        <div class="section-title-wrap">
+            <span class="section-tag">Contacto</span>
+            <h2 class="section-title">¿Dudas o requerimientos?</h2>
+            <p class="section-desc">Envíanos un mensaje rápido y nos pondremos en contacto vía WhatsApp de inmediato.</p>
+        </div>
+        <div style="max-width:680px;margin:0 auto;">
+            <div class="glass-panel" style="padding:40px;">
                 <form id="contact-form">
                     <?php wp_nonce_field('ep_contact', 'ep_contact_nonce'); ?>
                     <div class="form-group">
