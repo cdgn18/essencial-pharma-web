@@ -48,30 +48,6 @@
     </div>
 </section>
 
-<!-- Stats Strip -->
-<div class="stats-strip">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-num">+5</span>
-                <span class="stat-label">Años de Experiencia</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-num">+100</span>
-                <span class="stat-label">Clientes Institucionales</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-num">4</span>
-                <span class="stat-label">Líneas Especializadas</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-num">100%</span>
-                <span class="stat-label">Cobertura Nacional</span>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Services Section -->
 <section class="section" id="servicios" style="background:var(--bg-secondary);">
     <div class="container">
