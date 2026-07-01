@@ -1685,6 +1685,14 @@ img {
     .nav-mobile-wrap.active {
         left: 0;
     }
+    /* override the hero-white color — mobile menu has light bg */
+    .nav-mobile-wrap.active .nav-link {
+        color: var(--text-primary);
+    }
+    .nav-mobile-wrap.active .nav-link:hover,
+    .nav-mobile-wrap.active .nav-link.active {
+        color: var(--color-secondary);
+    }
     .nav-left, .nav-right {
         display: flex;
         flex-direction: column;
