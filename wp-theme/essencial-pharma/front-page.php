@@ -48,6 +48,100 @@
     </div>
 </section>
 
+<!-- Promo Banner Section -->
+<?php
+$promo_product = null;
+if ( class_exists('WooCommerce') ) {
+    $promo_query = new WP_Query([
+        'post_type'      => 'product',
+        'posts_per_page' => 1,
+        'meta_query'     => [
+            [
+                'key'     => '_ep_badge',
+                'value'   => 'DESTACADO',
+                'compare' => '='
+            ]
+        ]
+    ]);
+
+    if ($promo_query->have_posts()) {
+        $promo_query->the_post();
+        global $product;
+        $promo_product = $product;
+    } else {
+        $fallback_query = new WP_Query([
+            'post_type'      => 'product',
+            'posts_per_page' => 1,
+            'name'           => 'tonico-anticaida-estimulante'
+        ]);
+        if ($fallback_query->have_posts()) {
+            $fallback_query->the_post();
+            global $product;
+            $promo_product = $product;
+        }
+        wp_reset_postdata();
+    }
+    wp_reset_postdata();
+}
+
+$promo_title = $promo_product ? $promo_product->get_name() : 'Tónico Anticaída Estimulante';
+$promo_desc  = $promo_product ? wp_strip_all_tags($promo_product->get_short_description() ?: $promo_product->get_description()) : 'Fórmula científica avanzada con extractos botánicos y factores de crecimiento. Estimula la circulación del cuero cabelludo, fortalece el folículo y detiene la caída en 4 semanas.';
+if (strlen($promo_desc) > 300) {
+    $promo_desc = wp_html_excerpt($promo_desc, 280) . '…';
+}
+
+$promo_img_url = '';
+if ($promo_product) {
+    $promo_img_url = get_the_post_thumbnail_url($promo_product->get_id(), 'large');
+}
+if (!$promo_img_url) {
+    $promo_img_url = esc_url(get_template_directory_uri()) . '/assets/images/dermo_tonico.png';
+}
+
+$promo_add_to_cart_url = $promo_product ? esc_url($promo_product->add_to_cart_url()) : '#';
+$promo_id = $promo_product ? esc_attr($promo_product->get_id()) : 'dermo-2';
+$promo_sku = $promo_product ? esc_attr($promo_product->get_sku()) : '';
+?>
+
+<section class="section promo-section" id="destacado">
+    <div class="container">
+        <div class="promo-banner glass-panel">
+            <div class="promo-content">
+                <span class="promo-tag">PRODUCTO ESTRELLA 🌟</span>
+                <h2 class="promo-title"><?php echo esc_html($promo_title); ?></h2>
+                <p class="promo-desc"><?php echo esc_html($promo_desc); ?></p>
+                <ul class="promo-benefits-list">
+                    <li><span class="check-icon">✓</span> Reduce la caída del cabello notablemente</li>
+                    <li><span class="check-icon">✓</span> Activa y fortalece la raíz folicular</li>
+                    <li><span class="check-icon">✓</span> Aumenta la densidad y volumen capilar</li>
+                </ul>
+                <div class="promo-actions">
+                    <?php if ($promo_product) : ?>
+                    <a href="<?php echo $promo_add_to_cart_url; ?>"
+                       data-quantity="1"
+                       data-product_id="<?php echo $promo_id; ?>"
+                       data-product_sku="<?php echo $promo_sku; ?>"
+                       class="btn btn-secondary add_to_cart_button ajax_add_to_cart promo-add-btn">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Añadir al Carrito
+                    </a>
+                    <?php else : ?>
+                    <button class="btn btn-secondary promo-add-btn" onclick="addToCart('dermo-2')">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Añadir al Carrito
+                    </button>
+                    <?php endif; ?>
+                    <a href="#dermocosmetica" class="btn btn-outline">Ver en la Tienda</a>
+                </div>
+            </div>
+            <div class="promo-visual">
+                <div class="promo-glow-bg"></div>
+                <img src="<?php echo $promo_img_url; ?>" alt="<?php echo esc_attr($promo_title); ?>" class="promo-product-img">
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Services Section -->
 <section class="section" id="servicios" style="background:var(--bg-secondary);">
     <div class="container">
