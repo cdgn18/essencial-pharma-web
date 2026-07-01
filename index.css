@@ -1922,163 +1922,214 @@ img {
     }
 }
 
-/* Promo Banner Section Styles */
+/* Promo Banner Section Styles (Farmatodo Retail Style) */
 .promo-section {
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
-.promo-banner {
+.promo-banners-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.promo-banner-card {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    padding: 50px;
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--bg-glass), rgba(15, 23, 42, 0.02));
+    min-height: 240px;
+    cursor: pointer;
+    background: var(--bg-glass);
     border: 1px solid var(--border-glass);
-    box-shadow: var(--shadow-lg);
-    border-radius: var(--radius-lg);
-}
-
-[data-theme="dark"] .promo-banner {
-    background: linear-gradient(135deg, var(--bg-glass), rgba(0, 208, 132, 0.02));
-}
-
-.promo-content {
-    position: relative;
-    z-index: 2;
-}
-
-.promo-tag {
-    font-family: var(--font-primary);
-    font-weight: 700;
-    font-size: 0.8rem;
-    color: var(--color-accent);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 12px;
-    background: rgba(200, 140, 0, 0.1);
-    padding: 6px 12px;
-    border-radius: 20px;
-}
-
-.promo-title {
-    font-size: 2.3rem;
-    font-weight: 800;
-    margin-bottom: 16px;
-    line-height: 1.2;
-    background: linear-gradient(135deg, var(--text-primary), var(--color-primary-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-[data-theme="dark"] .promo-title {
-    background: linear-gradient(135deg, var(--text-primary), var(--color-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.promo-desc {
-    font-size: 1.05rem;
-    color: var(--text-secondary);
-    margin-bottom: 24px;
-    line-height: 1.6;
-}
-
-.promo-benefits-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 30px;
-}
-
-.promo-benefits-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-.promo-benefits-list .check-icon {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--color-secondary);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: 800;
-}
-
-.promo-actions {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
-
-.promo-visual {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.promo-glow-bg {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(0, 208, 132, 0.15) 0%, transparent 70%);
-    filter: blur(30px);
-    z-index: 1;
-    animation: pulseGlow 6s infinite ease-in-out;
-}
-
-@keyframes pulseGlow {
-    0%, 100% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.2); opacity: 1; }
-}
-
-.promo-product-img {
-    max-height: 320px;
-    object-fit: contain;
-    position: relative;
-    z-index: 2;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.12));
+    box-shadow: var(--shadow-glass);
     transition: var(--transition-bounce);
 }
 
-.promo-banner:hover .promo-product-img {
-    transform: translateY(-8px) scale(1.03) rotate(2deg);
-    filter: drop-shadow(0 15px 30px rgba(0,208,132,0.15));
+.promo-banner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-secondary);
 }
 
+/* Background Gradients */
+.capilar-banner {
+    background: linear-gradient(135deg, rgba(0, 208, 132, 0.05) 0%, rgba(56, 189, 248, 0.12) 100%);
+}
+[data-theme="dark"] .capilar-banner {
+    background: linear-gradient(135deg, rgba(0, 208, 132, 0.1) 0%, rgba(56, 189, 248, 0.18) 100%);
+}
+
+.vet-banner {
+    background: linear-gradient(135deg, rgba(200, 140, 0, 0.05) 0%, rgba(15, 23, 42, 0.04) 100%);
+}
+[data-theme="dark"] .vet-banner {
+    background: linear-gradient(135deg, rgba(200, 140, 0, 0.1) 0%, rgba(17, 26, 46, 0.3) 100%);
+}
+
+.promo-card-content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promo-brand {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 0.72rem;
+    color: var(--text-light);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+[data-theme="dark"] .promo-brand {
+    color: var(--color-secondary);
+}
+
+.promo-card-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.promo-card-tagline {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 10px 0 0 0;
+}
+
+/* Products stack representation */
+.promo-card-products {
+    position: relative;
+    height: 170px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prod-stack {
+    position: absolute;
+    max-height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 18px rgba(15, 23, 42, 0.12));
+    transition: var(--transition-bounce);
+}
+
+[data-theme="dark"] .prod-stack {
+    filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.5));
+}
+
+/* Capilar Stack placement */
+.capilar-banner .stack-1 {
+    left: 8%;
+    bottom: 5px;
+    z-index: 1;
+    transform: rotate(-10deg) scale(0.9);
+}
+
+.capilar-banner .stack-2 {
+    left: 33%;
+    bottom: 12px;
+    z-index: 3;
+    transform: scale(1.08);
+}
+
+.capilar-banner .stack-3 {
+    left: 58%;
+    bottom: 5px;
+    z-index: 2;
+    transform: rotate(10deg) scale(0.95);
+}
+
+/* Capilar hover stack animations */
+.capilar-banner:hover .stack-1 {
+    transform: rotate(-16deg) translateX(-15px) scale(0.92);
+}
+
+.capilar-banner:hover .stack-2 {
+    transform: translateY(-10px) scale(1.12);
+}
+
+.capilar-banner:hover .stack-3 {
+    transform: rotate(16deg) translateX(15px) scale(0.98);
+}
+
+/* Vet Stack placement */
+.vet-banner .stack-1 {
+    left: 12%;
+    bottom: 5px;
+    z-index: 1;
+    transform: rotate(-6deg) scale(0.92);
+    border-radius: var(--radius-sm);
+}
+
+.vet-banner .stack-2 {
+    left: 45%;
+    bottom: 8px;
+    z-index: 2;
+    transform: rotate(6deg) scale(0.98);
+    border-radius: var(--radius-sm);
+}
+
+/* Vet hover stack animations */
+.vet-banner:hover .stack-1 {
+    transform: rotate(-12deg) translateX(-10px) scale(0.94);
+}
+
+.vet-banner:hover .stack-2 {
+    transform: rotate(12deg) translateX(10px) translateY(-8px) scale(1.02);
+}
+
+/* Responsive grid layout */
 @media (max-width: 992px) {
-    .promo-banner {
+    .promo-banners-grid {
         grid-template-columns: 1fr;
-        padding: 40px;
-        gap: 30px;
-        text-align: center;
+        gap: 20px;
     }
     
-    .promo-benefits-list {
-        align-items: center;
+    .promo-banner-card {
+        padding: 30px;
+        min-height: 220px;
     }
     
-    .promo-actions {
-        justify-content: center;
-    }
-    
-    .promo-product-img {
-        max-height: 260px;
+    .promo-card-title {
+        font-size: 1.6rem;
     }
 }
+
+@media (max-width: 576px) {
+    .promo-banner-card {
+        grid-template-columns: 1.3fr 0.7fr;
+        padding: 24px;
+        min-height: 180px;
+    }
+    
+    .promo-card-title {
+        font-size: 1.3rem;
+    }
+    
+    .promo-card-tagline {
+        font-size: 0.8rem;
+    }
+    
+    .prod-stack {
+        max-height: 110px;
+    }
+    
+    .promo-card-products {
+        height: 120px;
+    }
+}
+
 
 

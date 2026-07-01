@@ -241,3 +241,26 @@ function showSuccessModal(title, message) {
     document.getElementById('success-message').textContent = message;
     document.getElementById('success-modal').classList.add('active');
 }
+
+window.filterShopCategory = function (category) {
+    const shopTabBtns = document.querySelectorAll('[data-shop-tab]');
+    const shopCards   = document.querySelectorAll('.prod-card[data-category]');
+    
+    shopTabBtns.forEach(btn => {
+        if (btn.dataset.shopTab === category) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    shopCards.forEach(card => {
+        card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+    });
+
+    const shopSection = document.getElementById('dermocosmetica');
+    if (shopSection) {
+        shopSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+

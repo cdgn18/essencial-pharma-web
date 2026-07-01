@@ -131,29 +131,34 @@
     </section>
 
     <!-- Promo Banner Section -->
-    <section class="section promo-section" id="destacado">
+    <section class="section promo-section" id="publicidad">
         <div class="container">
-            <div class="promo-banner glass-panel">
-                <div class="promo-content">
-                    <span class="promo-tag">PRODUCTO ESTRELLA 🌟</span>
-                    <h2 class="promo-title">Tónico Anticaída Estimulante</h2>
-                    <p class="promo-desc">Fórmula científica avanzada con extractos botánicos y factores de crecimiento. Estimula la circulación del cuero cabelludo, fortalece el folículo y detiene la caída en 4 semanas.</p>
-                    <ul class="promo-benefits-list">
-                        <li><span class="check-icon">✓</span> Reduce la caída del cabello notablemente</li>
-                        <li><span class="check-icon">✓</span> Activa y fortalece la raíz folicular</li>
-                        <li><span class="check-icon">✓</span> Aumenta la densidad y volumen capilar</li>
-                    </ul>
-                    <div class="promo-actions">
-                        <button class="btn btn-secondary promo-add-btn" onclick="addToCart('dermo-2')">
-                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                            Añadir al Carrito
-                        </button>
-                        <a href="#dermocosmetica" class="btn btn-outline">Ver en la Tienda</a>
+            <div class="promo-banners-grid">
+                <!-- Banner Capilar -->
+                <div class="promo-banner-card capilar-banner glass-panel" onclick="filterShopCategory('dermocosmetica')">
+                    <div class="promo-card-content">
+                        <span class="promo-brand">ESSENCIAL PHARMA</span>
+                        <h3 class="promo-card-title">DERMOCOSMÉTICA<br>CAPILAR</h3>
+                        <p class="promo-card-tagline">Cuidado clínico y salud folicular</p>
+                    </div>
+                    <div class="promo-card-products">
+                        <img src="./images/dermo_shampoo.png" alt="Shampoo" class="prod-stack stack-1">
+                        <img src="./images/dermo_tonico.png" alt="Tónico" class="prod-stack stack-2">
+                        <img src="./images/dermo_tratamiento.png" alt="Tratamiento" class="prod-stack stack-3">
                     </div>
                 </div>
-                <div class="promo-visual">
-                    <div class="promo-glow-bg"></div>
-                    <img src="./images/dermo_tonico.png" alt="Tónico Anticaída" class="promo-product-img">
+
+                <!-- Banner Veterinario -->
+                <div class="promo-banner-card vet-banner glass-panel" onclick="filterShopCategory('veterinaria')">
+                    <div class="promo-card-content">
+                        <span class="promo-brand">ESSENCIAL PHARMA</span>
+                        <h3 class="promo-card-title">LÍNEA<br>VETERINARIA</h3>
+                        <p class="promo-card-tagline">Salud y protección para mascotas</p>
+                    </div>
+                    <div class="promo-card-products">
+                        <img src="./images/DERMOPROTECTORMASCOTAS.jpg" alt="Shampoo Mascotas" class="prod-stack stack-1">
+                        <img src="./images/SUPLEMENTOALIMENTICIOCANINO.jpg" alt="Suplemento" class="prod-stack stack-2">
+                    </div>
                 </div>
             </div>
         </div>

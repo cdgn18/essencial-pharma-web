@@ -730,3 +730,22 @@ function showSuccessModal(title, message) {
 window.addToCart = addToCart;
 window.updateQuantity = updateQuantity;
 window.removeFromCart = removeFromCart;
+
+window.filterShopCategory = function(category) {
+    const shopTabButtons = document.querySelectorAll('[data-shop-tab]');
+    shopTabButtons.forEach(btn => {
+        if (btn.dataset.shopTab === category) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    shopActiveTab = category;
+    renderDermoProducts();
+    
+    const shopSection = document.getElementById('dermocosmetica');
+    if (shopSection) {
+        shopSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+
