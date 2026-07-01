@@ -122,7 +122,7 @@
         <div class="qs-split">
             <div class="qs-img-wrap">
                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Rectangle-10-5.png" alt="Equipo de investigación Essencial Pharma" class="qs-img">
-                <div class="qs-img-badge glass-panel"><strong>+5 años</strong><span>distribuyendo salud en Colombia</span></div>
+                <div class="qs-img-badge glass-panel"><strong>Colombia</strong><span>y Latinoamérica</span></div>
             </div>
             <div class="qs-content">
                 <div class="mv-card glass-panel">
